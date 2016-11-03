@@ -8,10 +8,10 @@ class Signup extends React.Component {
         this.signUp = this.signUp.bind(this)
         this.signedupHandler = this.signedupHandler.bind(this)
         this.state = {
-            firstName: '',
-            lastName: '',
-            username: '',
-            password: '',
+            firstName: "",
+            lastName: "",
+            username: "",
+            password: "",
             photo: null,
         }
     }
@@ -38,7 +38,9 @@ class Signup extends React.Component {
     signedupHandler(userData) {
         console.log(userData)
         // sessionStorage the api token
+        sessionStorage.setItem('', response.user.api_token)
         // window.location.href = '' redirect to next page
+        window.location.href = ''
     }
 
     render() {
