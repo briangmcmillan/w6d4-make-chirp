@@ -6,29 +6,46 @@ img {
   width: 100%;
 }
 
-#logoPhoto {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.header {
+  height: 400px;
 }
 
-#photoGrid {
-  display: flex;
-  flex-wrap: wrap;
+.feed {
+  height: 50vw;
 }
 
-.photo {
-  width: 28%;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background: #d6d6d6;
-  border: 1px solid #d0d0d0;
+.feed .panel {
+  height: 100px;
 }
 
-img {
-  margin-bottom: 10px;
+.newUsers {
+  height: 25vw;
 }
 
-span {
-  font-weight: bold;
+.following {
+  height: 25vw;
+}
+
+.avatar {
+  height: 236px;
+  width: 304px;
+  border-radius: 50%;
+}
+
+.col-sm-3 {
+  padding: 0;
+}
+
+.col-sm-9 {
+  padding: 0;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+@media all and (max-width: 768px) {
+  .logo {
+    text-align: center;
+  }
 }

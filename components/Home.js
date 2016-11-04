@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import Header from '../components/Header'
+import Header from './Header'
 
 class Home extends React.Component {
     constructor(props) {
@@ -40,9 +40,10 @@ class Home extends React.Component {
         return (
             <div>
                 <Header />
-                <Link to="/signup"><button type="button" id="signup" className="btn btn-default btn-block">Sign Up</button></Link>
-
-                {/* <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button></Link> */}
+                <Link to="/signup"><button type="button" id="signup" className="btn btn-default btn-block">Sign Up</button>
+                </Link>
+                <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button>
+                </Link>
             </div>
         )
     }
