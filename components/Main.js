@@ -1,5 +1,6 @@
 import React from 'react'
 import MainHeader from './MainHeader'
+import CreateChirp from './CreateChirp'
 
 class Main extends React.Component {
     render() {
@@ -8,7 +9,7 @@ class Main extends React.Component {
             <MainHeader />
         </div>
         <div className="container-fluid">
-
+            <CreateChirp />
         </div>
     </div>
     }

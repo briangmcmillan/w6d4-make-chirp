@@ -15,7 +15,11 @@ class MainHeader extends React.Component {
 
     componentDidMount() {
         var user = JSON.parse(sessionStorage.getItem('user'))
-        fetch('https://4e836632.ngrok.io/users/' + user.username)
+        // need to JSON.parse() because JSON.stringify() on signup/in --> needs to return back into an object from the string we created.
+        //console.log(user)
+        //fetch('https://4e836632.ngrok.io/users/' + user.id)
+        fetch('https://4e836632.ngrok.io/users/me?api_token=' + sessionStorage.getItem('api_token'))
+        // adding the username of whoever signed up/logged in to the fetch URL.
         .then(response => response.json())
         // .then(response => console.log(response))
         .then(this.updateUser)
@@ -37,7 +41,7 @@ class MainHeader extends React.Component {
                 <h1 className="logo">Chirp.</h1>
               </div>
               <div className="col-sm-10 text-center border" >
-                <img src={this.state.photo} alt="avatar photo" className="img-responsive avatar center-block border" /><br />
+                <img src={'https://4e836632.ngrok.io' + this.state.photo} alt="avatar photo" className="img-responsive avatar center-block border" /><br />
                 {this.state.firstName} {this.state.lastName}<br/>
                 {this.state.username}
               </div>
