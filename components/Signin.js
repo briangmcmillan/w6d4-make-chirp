@@ -29,6 +29,8 @@ class Signin extends React.Component {
         console.log(response)
         // sessionStorage the api token
         sessionStorage.setItem('api_token', response.user.api_token)
+        sessionStorage.setItem('user', JSON.stringify(response.user))
+        // session storage only stores strings
         // window.location.href = '' redirect to next page
         window.location.href = '/Main'
     }

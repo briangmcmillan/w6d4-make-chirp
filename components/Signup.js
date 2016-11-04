@@ -37,6 +37,7 @@ class Signup extends React.Component {
         console.log(response)
         // sessionStorage the api token
         sessionStorage.setItem('api_token', response.user.api_token)
+        sessionStorage.setItem('user', JSON.stringify(response.user))
         // window.location.href = '' redirect to next page
         window.location.href = '/Main'
     }
