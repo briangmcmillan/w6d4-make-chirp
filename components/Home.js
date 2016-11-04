@@ -42,8 +42,8 @@ class Home extends React.Component {
             <div>
                 <Header />
                 <Link to="/signup"><button type="button" id="signup" className="btn btn-default btn-block">Sign Up</button></Link>
-
-                <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button></Link>
+{/* 
+                <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button></Link> */}
             </div>
         )
     }
