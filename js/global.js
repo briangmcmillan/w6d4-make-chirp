@@ -10,7 +10,6 @@ window.renderView = function() { // need to call because when we get a response 
     <Router history ={browserHistory}>
         <Route path="/" component={Home} />
         <Route path="/signup" component={Signup} />
-        {/* <Route path="/signin" component={SignIn} /> */}
     </Router> ,
     document.querySelector('#app')
     )
