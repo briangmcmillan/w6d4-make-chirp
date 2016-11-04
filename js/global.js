@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory } from 'react-router'
-
 import Home from '../components/Home'
 import Signup from '../components/Signup'
 
@@ -11,7 +10,11 @@ window.renderView = function() { // need to call because when we get a response 
     <Router history ={browserHistory}>
         <Route path="/" component={Home} />
         <Route path="/signup" component={Signup} />
+<<<<<<< HEAD
         {/* <Route path="/signin" component={Signin} /> */}
+=======
+        {/* <Route path="/signin" component={SignIn} /> */}
+>>>>>>> bb68a5eb0e2023e502ebdee14860423e0fb4768b
     </Router> ,
     document.querySelector('#app')
     )

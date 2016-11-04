@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router'
-
 import Header from '../components/Header'
 
 class Home extends React.Component {
@@ -42,8 +41,13 @@ class Home extends React.Component {
             <div>
                 <Header />
                 <Link to="/signup"><button type="button" id="signup" className="btn btn-default btn-block">Sign Up</button></Link>
+<<<<<<< HEAD
 {/* 
                 <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button></Link> */}
+=======
+
+                {/* <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button></Link> */}
+>>>>>>> bb68a5eb0e2023e502ebdee14860423e0fb4768b
             </div>
         )
     }
