@@ -22,7 +22,7 @@ class CreateChirp extends React.Component {
         // formData.append('tweets', this.state.chirps)
 
         // sessionStorage.setItem('user', JSON.stringify(response.user))
-        fetch('https://4e836632.ngrok.io/tweets', {
+        fetch('https://still-springs-37963.herokuapp.com/tweets', {
             body: formData,
             method: 'POST',
         })
@@ -41,7 +41,7 @@ class CreateChirp extends React.Component {
     }
 
     fetchTweets() {
-        fetch('https://4e836632.ngrok.io/tweets?api_token=' + sessionStorage.getItem('api_token'))
+        fetch('https://still-springs-37963.herokuapp.com/tweets?api_token=' + sessionStorage.getItem('api_token'))
         // adding the username of whoever signed up/logged in to the fetch URL.
         .then(response => response.json())
         // .then(response => console.log(response))
@@ -54,22 +54,9 @@ class CreateChirp extends React.Component {
         })
     }
 
-    // click(e) {
-    //     let updatedChirps = this.state.chirps
-    //     updatedChirps.push(this.state.newChirp)
-    //
-    //     this.setState({
-    //         chirps: updatedChirps
-    //     })
-    //
-    //     this.updatedFeed()
-    //     //     sessionStorage.setItem('chirps', JSON.stringify(updatedChirps))
-    // }
-
     render() {
         const PersonalChirps = this.state.chirps.map((item, i) => {
             return <PersonalChirp key={i} data={item} />
-            {/* //return <PersonalChirp data={item} key={i} /> */}
         })
         return <div>
             <div className="input-group">

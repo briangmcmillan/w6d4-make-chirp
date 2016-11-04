@@ -17,7 +17,7 @@ class Signin extends React.Component {
       formData.append('username', this.state.username)
       formData.append('password', this.state.password)
 
-      fetch('https://4e836632.ngrok.io/login', {
+      fetch('https://still-springs-37963.herokuapp.com/login', {
         body: formData,
         method: 'POST',
       })

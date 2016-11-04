@@ -24,7 +24,7 @@ class Signup extends React.Component {
       formData.append('password', this.state.password)
       formData.append('avatar', this.state.photo)
       console.log(formData)
-      fetch('https://4e836632.ngrok.io/signup', {
+      fetch('https://still-springs-37963.herokuapp.com/signup', {
         body: formData,
         method: 'POST'
       })

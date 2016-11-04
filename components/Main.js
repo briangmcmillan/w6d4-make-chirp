@@ -1,6 +1,8 @@
 import React from 'react'
 import MainHeader from './MainHeader'
 import CreateChirp from './CreateChirp'
+import OtherUsers from './OtherUsers'
+
 
 class Main extends React.Component {
     render() {
@@ -9,7 +11,15 @@ class Main extends React.Component {
             <MainHeader />
         </div>
         <div className="container-fluid">
-            <CreateChirp />
+            <div className="row">
+                <div className="col-sm-8">
+                    <CreateChirp />
+                </div>
+                <div className="col-sm-4">
+                    <OtherUsers />
+                    {/* <Following /> */}
+                </div>
+            </div>
         </div>
     </div>
     }
