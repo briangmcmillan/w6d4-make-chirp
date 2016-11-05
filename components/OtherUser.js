@@ -2,8 +2,12 @@ import React from 'react'
 
 const OtherUser = (props) => (
     <div className="panel">
-    <span>{props.data}</span>
+        {props.data.firstname}
+        {props.data.lastname}
+        {props.data.username}
     </div>
 )
+
+
 
 export default OtherUser
