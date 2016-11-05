@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class MainHeader extends React.Component {
     constructor(props) {
@@ -34,6 +35,11 @@ class MainHeader extends React.Component {
         })
     }
 
+    logout() {
+        sessionStorage.removeItem('api_token')
+        window.location.href = "/signin"
+    }
+
     render() {
         return <div>
             <div className="row border header">
@@ -46,7 +52,7 @@ class MainHeader extends React.Component {
                 {this.state.username}
               </div>
               <div className="col-sm-1 text-right border">
-                <button type="button" className="btn btn-primary logo center-block">Logout</button>
+                <Link to="/signin"><button type="button" className="btn btn-primary logo center-block" onClick={this.logout}>Logout</button></Link>
               </div>
             </div>
         </div>

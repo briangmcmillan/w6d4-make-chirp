@@ -27,18 +27,25 @@ class OtherUsers extends React.Component {
         })
     }
 
-    addUser(i) {
+    addUser(currentUserIndex) {
         let updatedUsers = this.state.following
 
-        updatedUsers[i].done = !updatedUsers[i].done
-
+        if (updatedUsers[currentUserIndex].following === false) {
+            updatedUsers[currentUserIndex].following = true
+        }
+        else {
+            updatedUsers[currentUserIndex].following = false
+        }
         this.updatedUsers(updatedUsers)
     }
+
     updatedUsers(updatedUsers) {
         this.setState({
             following: updatedUsers
         })
+        console.log(updatedUsers)
     }
+
 
     // fetchUsers() {
     //     fetch('https://still-springs-37963.herokuapp.com/users')
