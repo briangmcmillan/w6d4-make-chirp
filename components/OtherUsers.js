@@ -5,8 +5,8 @@ class OtherUsers extends React.Component {
     constructor(props) {
         super(props)
         this.componentDidMount = this.componentDidMount.bind(this)
+        this.follow = this.follow.bind(this)
         this.addUser = this.addUser.bind(this)
-        this.updatedUsers = this.updatedUsers.bind(this)
         // this.displayUsers = this.displayUsers.bind(this)
         // this.fetchUsers = this.fetchUsers.bind(this)
         this.state = {
@@ -14,7 +14,8 @@ class OtherUsers extends React.Component {
             lastName: '--',
             username: '--',
             users: [],
-            following: [],
+            following: false,
+            followingList: []
         }
     }
     componentDidMount() {
@@ -27,24 +28,36 @@ class OtherUsers extends React.Component {
         })
     }
 
-    addUser(currentUserIndex) {
-        let updatedUsers = this.state.following
+    follow() {
+        var formData = new FormData()
+        formData.append('id', sessionStorage.getItem('id'))
+        // formData.append('tweets', this.state.chirps)
 
-        if (updatedUsers[currentUserIndex].following === false) {
-            updatedUsers[currentUserIndex].following = true
-        }
-        else {
-            updatedUsers[currentUserIndex].following = false
-        }
-        this.updatedUsers(updatedUsers)
-    }
-
-    updatedUsers(updatedUsers) {
-        this.setState({
-            following: updatedUsers
+        // sessionStorage.setItem('user', JSON.stringify(response.user))
+        fetch('https://still-springs-37963.herokuapp.com/users/' + sessionStorage.getItem('id') + '/follow' , {
+            body: formData,
+            method: 'POST',
         })
-        console.log(updatedUsers)
+        .then(response => response.json())
+        .then(this.addUser)
     }
+
+    addUser(e) {
+        this.setState({
+            following: true
+        })
+        if (this.following === true) {
+            let updatedUsers = this.state.followingList
+            updatedUsers.push({
+                followingList: e.target.value
+            })
+        }
+    }
+
+
+
+
+
 
 
     // fetchUsers() {
@@ -65,14 +78,14 @@ class OtherUsers extends React.Component {
     render() {
         console.log(this.state.users)
         console.log(this.state.following)
+        console.log(this.state)
         const OtherUsersOne = this.state.users.map((item, i) => {
             return <OtherUser key={i} data={item} addUser={() => this.addUser(i)} />
         })
         return <div>
-
-            <h1>other users</h1>
-            <div className="panel">
-            {OtherUsersOne}
+            <div className="panel others_panel">
+                <h1>other users</h1>
+                {OtherUsersOne}
             </div>
         </div>
     }

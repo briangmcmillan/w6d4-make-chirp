@@ -59,13 +59,16 @@ class CreateChirp extends React.Component {
             return <PersonalChirp key={i} data={item} />
         })
         return <div>
-            <div className="input-group">
-                <input type="text" className="form-control" maxLength="165" placeholder="Chirp chirp..." value={this.state.newChirp} onChange={this.typing}/>
-                <span className="input-group-btn">
-                <button className="btn btn-default" type="button" onClick={this.updateFeed}>Chirp!</button>
-                </span>
+            <div className="panel feed_panel">
+                <div className="input-group">
+                    <input type="text" className="form-control" maxLength="165" placeholder="Chirp chirp..." value={this.state.newChirp} onChange={this.typing}/>
+                    <span className="input-group-btn">
+                    <button className="btn btn-default" type="button" onClick={this.updateFeed}>Chirp!</button>
+                    </span>
+                </div>
+                
+                {PersonalChirps}
             </div>
-            {PersonalChirps}
         </div>
     }
 }

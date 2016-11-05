@@ -6,8 +6,39 @@ img {
   width: 100%;
 }
 
+body {
+  background-color: #9099ba;
+}
+
 .header {
   height: 400px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.panel {
+  box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+  height: 205px;
+  width: 205px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.logout_button {
+  margin-top: 20px;
+}
+
+.feed_panel {
+  margin-left: 25px;
+  margin-right: 0;
+  margin-top: 25px;
+}
+
+.others_panel {
+  margin: 25px;
 }
 
 .feed {
@@ -18,18 +49,26 @@ img {
   height: 100px;
 }
 
+.username {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.individual_chirps {
+  height: 75px;
+  padding-top: 15px;
+  border-bottom: 1px solid rgba(214, 214, 214, 0.61);
+  word-wrap: break-word;
+  font-size: 14;
+  padding: 5px;
+}
+
 .newUsers {
   height: 25vw;
 }
 
 .following {
   height: 25vw;
-}
-
-.avatar {
-  height: 236px;
-  width: 304px;
-  border-radius: 50%;
 }
 
 .col-sm-3 {
@@ -44,8 +83,20 @@ img {
   border: 1px solid black;
 }
 
+@media all and (min-width: 768px) and (max-width: 834px) {
+  .individual_chirps {
+    height: 100px;
+  }
+}
+
 @media all and (max-width: 768px) {
   .logo {
     text-align: center;
+  }
+  .individual_chirps {
+    height: 100px;
+  }
+  .feed_panel {
+    margin: 25px;
   }
 }

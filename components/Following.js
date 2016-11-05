@@ -38,7 +38,7 @@ class Following extends React.Component {
     render() {
         return <div>
             <h1>following</h1>
-            <div className="panel">
+            <div className="panel margin_panel">
 
             </div>
         </div>
