@@ -37,15 +37,17 @@ class Home extends React.Component {
 
 
     render() {
-        return (
-            <div>
-                <Header />
-                <Link to="/signup"><button type="button" id="signup" className="btn btn-default btn-block">Sign Up</button>
-                </Link>
-                <Link to="/signin"><button type="button" id="signin" className="btn btn-default btn-block">Sign In</button>
-                </Link>
+        return <div>
+            <div className="col-sm-6 col-sm-offset-3">
+            <Header />
+                <div className="form-group">
+                    <Link to="/signup"><button type="button" id="signup" className="btn btn-primary btn-block">Sign Up</button>
+                    </Link>
+                    <Link to="/signin"><button type="button" id="signin" className="btn btn-primary btn-block">Sign In</button>
+                    </Link>
+                </div>
             </div>
-        )
+        </div>
     }
 }
 // {this.state.temp} & {this.state.cond} --> grabs from set.state object.
