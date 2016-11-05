@@ -2,6 +2,7 @@ import React from 'react'
 import MainHeader from './MainHeader'
 import CreateChirp from './CreateChirp'
 import OtherUsers from './OtherUsers'
+import Following from './Following'
 
 
 class Main extends React.Component {
@@ -17,7 +18,7 @@ class Main extends React.Component {
                 </div>
                 <div className="col-sm-4">
                     <OtherUsers />
-                    {/* <Following /> */}
+                    <Following />
                 </div>
             </div>
         </div>
