@@ -76,7 +76,7 @@ class OtherUsers extends React.Component {
     //     })
     // }
     render() {
-        console.log(this.state.users)
+        // console.log(this.state.users)
         console.log(this.state.following)
         console.log(this.state)
         const OtherUsersOne = this.state.users.map((item, i) => {

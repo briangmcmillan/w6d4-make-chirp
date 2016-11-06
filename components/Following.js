@@ -28,7 +28,7 @@ class Following extends React.Component {
     // }
 
     displayFollowers() {
-        fetch('https://still-springs-37963.herokuapp.com/users/')
+        fetch('https://still-springs-37963.herokuapp.com/users')
         .then(response => response.json())
         .then(response => console.log(response))
     }

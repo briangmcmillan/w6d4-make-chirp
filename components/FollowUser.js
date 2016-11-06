@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 class FollowUser extends React.Component {
     constructor(props) {
         super(props)
