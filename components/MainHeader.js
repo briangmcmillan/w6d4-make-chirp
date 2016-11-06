@@ -42,17 +42,18 @@ class MainHeader extends React.Component {
 
     render() {
         return <div>
-            <div className="row border header panel">
+            <div className="row header panel">
               <div className="col-sm-1">
                 <h1 className="logo">Chirp.</h1>
               </div>
               <div className="col-sm-10 text-center" >
-                <img src={'https://still-springs-37963.herokuapp.com/' + this.state.photo} alt="avatar photo" className="img-responsive avatar center-block border" /><br />
-                {this.state.firstName} {this.state.lastName}<br/>
-                {this.state.username}
+                <img src={'https://still-springs-37963.herokuapp.com/' + this.state.photo} alt="avatar photo" className="img-responsive avatar center-block" /><br />
+                <div className="name_text">{this.state.firstName} {this.state.lastName}</div>
+                <br/>
+                <div className="username_text">{this.state.username}</div>
               </div>
               <div className="col-sm-1 text-right">
-                <Link to="/signin"><button type="button" className="btn btn-primary logo center-block logout_button" onClick={this.logout}>Logout</button></Link>
+                <Link to="/signin"><button type="button" className="btn logo center-block logout_button" onClick={this.logout}>Logout.</button></Link>
               </div>
             </div>
         </div>

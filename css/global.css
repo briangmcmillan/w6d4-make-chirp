@@ -7,17 +7,20 @@ img {
 }
 
 body {
-  background-color: #9099ba;
+  background-color: #EEEEEE;
+}
+
+.panel {
+  box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .header {
   height: 400px;
   margin: 25px;
-  padding: 25px;
 }
 
-.panel {
-  box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
+.logo {
+  color: #92DCE5;
 }
 
 .avatar {
@@ -27,31 +30,79 @@ body {
   margin-top: 50px;
 }
 
+.name_text {
+  font-size: 30px;
+}
+
+.username_text {
+  color: #bdbdbd;
+  font-weight: bold;
+}
+
 .logout_button {
   margin-top: 20px;
+  background-color: #bdbdbd;
+  color: white;
+  border: none;
+  font-size: 20px;
+  float: right;
+}
+
+.logout_button:hover {
+  background-color: #92DCE5;
+  color: white;
 }
 
 .feed_panel {
   margin-left: 25px;
   margin-right: 0;
   margin-top: 25px;
+  padding: 10px;
+}
+
+.feed {
+  height: 400px;
+  overflow: scroll;
+}
+
+.chirp_button {
+  background-color: #bdbdbd;
+  color: white;
+}
+
+.chirp_button:hover {
+  background-color: #92DCE5;
+  color: white;
 }
 
 .others_panel {
   margin: 25px;
 }
 
-.feed {
-  height: 50vw;
+.others_header {
+  color: #92DCE5;
+  margin-top: 5px;
+  padding-left: 10px;
 }
 
-.feed .panel {
-  height: 100px;
+.others_body {
+  height: 400px;
+  overflow: scroll;
+}
+
+.individual_users {
+  height: 75px;
+  padding-top: 15px;
+  border-bottom: 1px solid rgba(214, 214, 214, 0.61);
+  word-wrap: break-word;
+  font-size: 14;
+  padding: 5px;
 }
 
 .username {
   font-size: 16px;
   font-weight: bold;
+  color: #92DCE5;
 }
 
 .individual_chirps {
@@ -96,7 +147,23 @@ body {
   .individual_chirps {
     height: 100px;
   }
+  .avatar {
+    margin-top: 25px;
+  }
   .feed_panel {
     margin: 25px;
+  }
+  .logout_button {
+    margin-top: 10px;
+    float: none;
+  }
+  .username_text {
+    margin-top: -20px;
+  }
+  .header {
+    height: 440px;
+  }
+  .feed {
+    height: 200px;
   }
 }

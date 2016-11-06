@@ -84,8 +84,10 @@ class OtherUsers extends React.Component {
         })
         return <div>
             <div className="panel others_panel">
-                <h1>other users</h1>
+                <h1 className="panel-heading others_header">Other users.</h1>
+            <div className="others_body">
                 {OtherUsersOne}
+            </div>
             </div>
         </div>
     }
