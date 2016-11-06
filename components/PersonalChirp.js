@@ -2,8 +2,8 @@ import React from 'react'
 
 const PersonalChirp = (props) => (
     <div className="individual_chirps">
-    <div className="username">{props.data.user.username}</div>
-    <span>{props.data.body}</span>
+        <span className="username">@{props.data.user.username}</span>
+        <div>{props.data.body}</div>
     </div>
 )
 

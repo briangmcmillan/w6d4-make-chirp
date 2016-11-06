@@ -1,6 +1,5 @@
 import React from 'react'
 import PersonalChirp from './PersonalChirp'
-// import classAutoBind from 'react-helpers/dist/classAutoBind'
 
 class CreateChirp extends React.Component {
     constructor(props) {
@@ -60,14 +59,15 @@ class CreateChirp extends React.Component {
         })
         return <div>
             <div className="panel feed_panel">
-                <div className="input-group">
+                <div className="input-group panel-heading feed_heading">
                     <input type="text" className="form-control" maxLength="165" placeholder="Chirp chirp..." value={this.state.newChirp} onChange={this.typing}/>
                     <span className="input-group-btn">
-                    <button className="btn btn-default" type="button" onClick={this.updateFeed}>Chirp!</button>
+                    <button className="btn chirp_button" type="button" onClick={this.updateFeed}>Chirp!</button>
                     </span>
                 </div>
-                
-                {PersonalChirps}
+                <div className="feed">
+                    {PersonalChirps}
+                </div>
             </div>
         </div>
     }

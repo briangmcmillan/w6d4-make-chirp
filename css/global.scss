@@ -5,16 +5,18 @@ img {
     width: 100%;
 }
 body {
-    background-color: rgb(144, 153, 186);
-}
-.header {
-    height: 400px;
-    margin: 25px;
-    padding: 25px;
-
+    background-color: #EEEEEE;
 }
 .panel {
     box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
+}
+// main header / profile
+.header {
+    height: 400px;
+    margin: 25px;
+}
+.logo {
+    color: #92DCE5;
 }
 .avatar {
     height: 205px;
@@ -22,27 +24,77 @@ body {
     border-radius: 50%;
     margin-top: 50px;
 }
+.name_text {
+    font-size: 30px;
+}
+.username_text {
+    color: #bdbdbd;
+    font-weight: bold;
+}
 .logout_button {
     margin-top: 20px;
+    background-color: #bdbdbd;
+    color: white;
+    border: none;
+    font-size: 20px;
+    float: right;
 
+    &:hover {
+        background-color: #92DCE5;
+        color: white;
+    }
 }
+// main feed / create chirp
 .feed_panel {
     margin-left: 25px;
     margin-right: 0;
     margin-top: 25px;
+    padding: 10px;
 }
+.feed {
+    height: 400px;
+    overflow: scroll;
+}
+.chirp_button {
+    background-color: #bdbdbd;
+    color: white;
+
+    &:hover {
+        background-color: #92DCE5;
+        color: white;
+    }
+}
+
+
+// other users
 .others_panel {
     margin: 25px;
 }
-.feed {
-    height: 50vw;
-    .panel {
-        height: 100px;
-    }
+.others_header {
+    color: #92DCE5;
+    margin-top: 5px;
+    padding-left: 10px;
 }
+.others_body {
+    height: 400px;
+    overflow: scroll;
+}
+.individual_users {
+    height: 75px;
+    padding-top: 15px;
+    border-bottom: 1px solid rgba(214, 214, 214, 0.61);
+    word-wrap: break-word;
+    font-size: 14;
+    padding: 5px;
+}
+
+
+
+
 .username {
     font-size: 16px;
     font-weight: bold;
+    color: #92DCE5;
 }
 .individual_chirps {
     height: 75px;
@@ -86,7 +138,23 @@ body {
     .individual_chirps {
         height: 100px;
     }
+    .avatar {
+        margin-top: 25px;
+    }
     .feed_panel {
         margin: 25px;
+    }
+    .logout_button {
+        margin-top: 10px;
+        float: none;
+    }
+    .username_text {
+        margin-top: -20px;
+    }
+    .header {
+        height: 440px;
+    }
+    .feed {
+        height: 200px;
     }
 }
