@@ -44,7 +44,7 @@ class Signup extends React.Component {
 
     render() {
         return <div>
-            <div className="col-sm-6 col-sm-offset-3">
+            <div className="col-sm-4 col-sm-offset-4">
             <Header />
             <div className="form-group">
                 <label htmlFor="firstName">First Name</label>
@@ -67,7 +67,7 @@ class Signup extends React.Component {
             <input onChange={(e) => this.setState({photo: e.target.files[0]})} type="file" id="photo" name="photo" className="form-control" required />
           </div>
             <div className="form-group">
-                <button id="signup" type="button" className="btn btn-success btn-block" onClick={this.signUp}>Signup!</button>
+                <button id="signup" type="button" className="btn logout_button btn-block" onClick={this.signUp}>Sign Up</button>
             </div>
         </div>
     </div>

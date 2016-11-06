@@ -11,10 +11,9 @@ const Header = (props) => {
 
     return (
         <div>
-        <div id="logoPhoto" className="text-center">
-            chirp!
-        </div>
-            {/* <img id="logoPhoto" src="./img/chirp-logo.png" alt="chirp logo" /> */}
+            <div id="logoPhoto" className="text-center">
+                <img src={'/img/chirp-logo.png'} alt="chirp photo" className="img-responsive chirp_photo center-block" />
+            </div>
         </div>
     )
 }

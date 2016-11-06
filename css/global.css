@@ -7,7 +7,21 @@ img {
 }
 
 body {
-  background-color: #EEEEEE;
+  background-color: rgba(147, 221, 230, 0.51);
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.white {
+  color: white;
+}
+
+.chirp_photo {
+  height: 160px;
+  width: 205px;
+  margin-top: 50px;
 }
 
 .panel {
@@ -41,15 +55,15 @@ body {
 
 .logout_button {
   margin-top: 20px;
-  background-color: #bdbdbd;
-  color: white;
+  background-color: white;
+  color: #92DCE5;
   border: none;
   font-size: 20px;
   float: right;
 }
 
 .logout_button:hover {
-  background-color: #92DCE5;
+  background-color: #41d4e6;
   color: white;
 }
 
@@ -66,13 +80,15 @@ body {
 }
 
 .chirp_button {
-  background-color: #bdbdbd;
-  color: white;
+  background-color: white;
+  color: #92DCE5;
+  border: 1px solid #CCCCCC;
 }
 
 .chirp_button:hover {
   background-color: #92DCE5;
   color: white;
+  border: 1px solid #CCCCCC;
 }
 
 .others_panel {
@@ -128,10 +144,6 @@ body {
 
 .col-sm-9 {
   padding: 0;
-}
-
-.border {
-  border: 1px solid black;
 }
 
 @media all and (min-width: 768px) and (max-width: 834px) {

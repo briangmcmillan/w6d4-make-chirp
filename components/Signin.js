@@ -37,7 +37,7 @@ class Signin extends React.Component {
 
     render() {
         return <div>
-            <div className="col-sm-6 col-sm-offset-3">
+            <div className="col-sm-4 col-sm-offset-4">
             <Header />
             <div className="form-group">
                 <label htmlFor="username">Username</label>
@@ -48,7 +48,7 @@ class Signin extends React.Component {
                 <input type="password" id="password" name="password" className="form-control" required value={this.state.password} onChange={(e) => this.setState({password:e.target.value})} />
             </div>
             <div className="form-group">
-                <button id="signin" type="button" className="btn btn-success btn-block" onClick={this.signIn}>Signin!</button>
+                <button id="signin" type="button" className="btn logout_button btn-block" onClick={this.signIn}>Sign In</button>
             </div>
         </div>
     </div>

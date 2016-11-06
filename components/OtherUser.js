@@ -3,13 +3,12 @@ import React from 'react'
 
 const OtherUser = (props) => (
     <div className="individual_users">
-        <input type="button" onClick={props.addUser} value="Follow"/>
+        <input className="btn logout_button" type="button" onClick={props.addUser} value="Follow"/>
         {/* <span className={props.data.following?'following':''}> */}
-        {props.data.firstname} {props.data.lastname} {props.data.username}
+        {props.data.firstname} {props.data.lastname}
+        <div className="username">@{props.data.username}</div>
         {/* </span> */}
     </div>
 )
-
-
 
 export default OtherUser

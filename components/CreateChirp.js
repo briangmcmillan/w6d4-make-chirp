@@ -59,6 +59,7 @@ class CreateChirp extends React.Component {
         })
         return <div>
             <div className="panel feed_panel">
+                <h1 className="logo text-center white">Feed</h1>
                 <div className="input-group panel-heading feed_heading">
                     <input type="text" className="form-control" maxLength="165" placeholder="Chirp chirp..." value={this.state.newChirp} onChange={this.typing}/>
                     <span className="input-group-btn">

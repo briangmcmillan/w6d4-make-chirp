@@ -38,12 +38,12 @@ class Home extends React.Component {
 
     render() {
         return <div>
-            <div className="col-sm-6 col-sm-offset-3">
             <Header />
+            <div className="col-sm-4 col-sm-offset-4">
                 <div className="form-group">
-                    <Link to="/signup"><button type="button" id="signup" className="btn btn-primary btn-block">Sign Up</button>
+                    <Link to="/signup"><button type="button" id="signup" className="btn logout_button btn-block">Sign Up</button>
                     </Link>
-                    <Link to="/signin"><button type="button" id="signin" className="btn btn-primary btn-block">Sign In</button>
+                    <Link to="/signin"><button type="button" id="signin" className="btn logout_button btn-block">Sign In</button>
                     </Link>
                 </div>
             </div>

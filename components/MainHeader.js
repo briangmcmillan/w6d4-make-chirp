@@ -44,7 +44,7 @@ class MainHeader extends React.Component {
         return <div>
             <div className="row header panel">
               <div className="col-sm-1">
-                <h1 className="logo">Chirp.</h1>
+                <h1 className="logo">Chirp</h1>
               </div>
               <div className="col-sm-10 text-center" >
                 <img src={'https://still-springs-37963.herokuapp.com/' + this.state.photo} alt="avatar photo" className="img-responsive avatar center-block" /><br />
