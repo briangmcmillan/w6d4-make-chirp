@@ -1,5 +1,6 @@
+// this function is a work in progress.
+
 import React from 'react'
-// import OtherUsers from './FollowUser'
 
 class Unfollow extends React.Component {
     constructor(props) {
@@ -11,18 +12,13 @@ class Unfollow extends React.Component {
     }
 
     componentDidMount() {
-        // fetching the other users to display.
         fetch('https://still-springs-37963.herokuapp.com/followed?api_token=' + sessionStorage.getItem('api_token'))
         .then(response => response.json())
-        // .then(response => console.log(response))
-        // .then((response) => { this.setState ({firstName: response.users.firstname, lastName: response.users.lastname, username: response.users.username, users: response.users})
         .then((response) => {
             this.setState({
                 users: response.users
             })
         })
-        // this.fetchUsers()
-        // })
     }
 
     unfollow(userid) {
@@ -50,16 +46,12 @@ class Unfollow extends React.Component {
         })
         var displayFollowers = followersArray.map((follower, i) => {
             return <div key={i}>
-            <div className="individual_users">
-                <button className="btn logout_button" type="button" onClick={() => this.unfollow(follower.id)}>unfollow</button>
-                {/* <span className={props.data.following?'following':''}> */}
-                {follower.firstname} {follower.lastname}
-                <div className="username">@{follower.username}</div>
-                {/* </span> */}
-            </div>
+                <div className="individual_users">
+                    <button className="btn logout_button" type="button" onClick={() => this.unfollow(follower.id)}>unfollow</button>
+                        {follower.firstname} {follower.lastname}
+                    <div className="username">@{follower.username}</div>
 
-
-
+                </div>
             </div>
         })
         return <div>
