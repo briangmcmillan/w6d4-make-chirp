@@ -7,15 +7,12 @@ img {
 }
 
 body {
-  background-color: rgba(147, 221, 230, 0.51);
+  background-color: #e9e9e9;
 }
 
-.border {
-  border: 1px solid black;
-}
-
-.white {
-  color: white;
+.signinup_panel {
+  margin-top: 100px;
+  padding: 10px;
 }
 
 .chirp_photo {
@@ -34,7 +31,7 @@ body {
 }
 
 .logo {
-  color: #92DCE5;
+  color: #0E3B43;
 }
 
 .avatar {
@@ -56,14 +53,14 @@ body {
 .logout_button {
   margin-top: 20px;
   background-color: white;
-  color: #92DCE5;
-  border: none;
+  color: #0E3B43;
+  border: 1px solid #EEEEEE;
   font-size: 20px;
   float: right;
 }
 
 .logout_button:hover {
-  background-color: #41d4e6;
+  background-color: #0E3B43;
   color: white;
 }
 
@@ -75,18 +72,18 @@ body {
 }
 
 .feed {
-  height: 400px;
+  height: 44vw;
   overflow: scroll;
 }
 
 .chirp_button {
   background-color: white;
-  color: #92DCE5;
+  color: #0E3B43;
   border: 1px solid #CCCCCC;
 }
 
 .chirp_button:hover {
-  background-color: #92DCE5;
+  background-color: #0E3B43;
   color: white;
   border: 1px solid #CCCCCC;
 }
@@ -96,7 +93,7 @@ body {
 }
 
 .others_header {
-  color: #92DCE5;
+  color: #0E3B43;
   margin-top: 5px;
   padding-left: 10px;
 }
@@ -106,19 +103,31 @@ body {
   overflow: scroll;
 }
 
+.follow_button {
+  background-color: white;
+  color: #0E3B43;
+  border: 1px solid #CCCCCC;
+  float: right;
+}
+
+.follow_button:hover {
+  color: white;
+  background-color: #0E3B43;
+}
+
 .individual_users {
   height: 75px;
   padding-top: 15px;
   border-bottom: 1px solid rgba(214, 214, 214, 0.61);
   word-wrap: break-word;
   font-size: 14;
-  padding: 5px;
+  padding: 30px;
 }
 
 .username {
   font-size: 16px;
   font-weight: bold;
-  color: #92DCE5;
+  color: #0E3B43;
 }
 
 .individual_chirps {
@@ -146,12 +155,6 @@ body {
   padding: 0;
 }
 
-@media all and (min-width: 768px) and (max-width: 834px) {
-  .individual_chirps {
-    height: 100px;
-  }
-}
-
 @media all and (max-width: 768px) {
   .logo {
     text-align: center;
@@ -177,5 +180,9 @@ body {
   }
   .feed {
     height: 200px;
+  }
+  .signinup_panel {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

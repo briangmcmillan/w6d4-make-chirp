@@ -5,31 +5,29 @@ img {
     width: 100%;
 }
 body {
-    //previous color #EEEEEE
-    background-color: rgba(#93dde6, 0.51);
+    background-color: rgb(233, 233, 233);
 }
-.border {
-    border: 1px solid black;
+.signinup_panel {
+    margin-top: 100px;
+    padding: 10px;
 }
-.white {
-    color: white;
-}
+
 .chirp_photo {
     height: 160px;
     width: 205px;
     margin-top: 50px;
-
 }
 .panel {
     box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
 }
+
 // main header / profile
 .header {
     height: 400px;
     margin: 25px;
 }
 .logo {
-    color: #92DCE5;
+    color: #0E3B43;
 }
 .avatar {
     height: 205px;
@@ -46,19 +44,18 @@ body {
 }
 .logout_button {
     margin-top: 20px;
-    //previous color #bdbdbd
     background-color: white;
-    //previous color white
-    color: #92DCE5;
-    border: none;
+    color: #0E3B43;
+    border: 1px solid #EEEEEE;
     font-size: 20px;
     float: right;
 
     &:hover {
-        background-color: #41d4e6;
+        background-color: #0E3B43;
         color: white;
     }
 }
+
 // main feed / create chirp
 .feed_panel {
     margin-left: 25px;
@@ -67,16 +64,16 @@ body {
     padding: 10px;
 }
 .feed {
-    height: 400px;
+    height: 44vw;
     overflow: scroll;
 }
 .chirp_button {
     background-color: white;
-    color: #92DCE5;
+    color: #0E3B43;
     border: 1px solid #CCCCCC;
 
     &:hover {
-        background-color: #92DCE5;
+        background-color: #0E3B43;
         color: white;
         border: 1px solid #CCCCCC;
     }
@@ -88,7 +85,7 @@ body {
     margin: 25px;
 }
 .others_header {
-    color: #92DCE5;
+    color: #0E3B43;
     margin-top: 5px;
     padding-left: 10px;
 }
@@ -96,20 +93,30 @@ body {
     height: 400px;
     overflow: scroll;
 }
+.follow_button {
+    background-color: white;
+    color: #0E3B43;
+    border: 1px solid #CCCCCC;
+    float: right;
+
+    &:hover {
+        color: white;
+        background-color: #0E3B43;
+
+    }
+}
 .individual_users {
     height: 75px;
     padding-top: 15px;
     border-bottom: 1px solid rgba(214, 214, 214, 0.61);
     word-wrap: break-word;
     font-size: 14;
-    padding: 5px;
+    padding: 30px;
 }
-
-
 .username {
     font-size: 16px;
     font-weight: bold;
-    color: #92DCE5;
+    color: #0E3B43;
 }
 .individual_chirps {
     height: 75px;
@@ -119,29 +126,23 @@ body {
     font-size: 14;
     padding: 5px;
 }
-
 .newUsers {
     height: 25vw;
 }
+
+// following section
 .following {
     height: 25vw;
 }
 
-
-//Come back to this!!!
 .col-sm-3 {
     padding: 0;
 }
 .col-sm-9 {
     padding: 0;
 }
-//Come back to this!!!
 
-@media all and (min-width: 768px) and (max-width: 834px) {
-    .individual_chirps {
-        height: 100px;
-    }
-}
+
 @media all and (max-width: 768px) {
     .logo {
         text-align: center;
@@ -167,5 +168,9 @@ body {
     }
     .feed {
         height: 200px;
+    }
+    .signinup_panel {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
