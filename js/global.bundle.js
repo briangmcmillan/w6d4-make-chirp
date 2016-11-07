@@ -81,10 +81,10 @@
 	    _reactDom2.default.render(_react2.default.createElement(
 	        _reactRouter.Router,
 	        { history: _reactRouter.browserHistory },
-	        _react2.default.createElement(_reactRouter.Route, { path: '', component: _Home2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: 'signup', component: _Signup2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: 'signin', component: _Signin2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: 'main', component: _Main2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/signup', component: _Signup2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/signin', component: _Signin2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '/main', component: _Main2.default })
 	    ), document.querySelector('#app'));
 	};
 
@@ -27167,7 +27167,7 @@
 	                        { className: 'form-group' },
 	                        _react2.default.createElement(
 	                            _reactRouter.Link,
-	                            { to: this.state.path + 'signup' },
+	                            { to: '/signup' },
 	                            _react2.default.createElement(
 	                                'button',
 	                                { type: 'button', id: 'signup', className: 'btn logout_button btn-block' },
@@ -27176,7 +27176,7 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            _reactRouter.Link,
-	                            { to: this.state.path + 'signin' },
+	                            { to: '/signin' },
 	                            _react2.default.createElement(
 	                                'button',
 	                                { type: 'button', id: 'signin', className: 'btn logout_button btn-block' },
@@ -27701,7 +27701,7 @@
 	                        { className: 'col-sm-1 text-right' },
 	                        _react2.default.createElement(
 	                            _reactRouter.Link,
-	                            { to: this.state.path + 'signin' },
+	                            { to: '/signin' },
 	                            _react2.default.createElement(
 	                                'button',
 	                                { type: 'button', className: 'btn logo center-block logout_button', onClick: this.logout },
