@@ -53,7 +53,7 @@ class MainHeader extends React.Component {
                 <div className="username_text">{this.state.username}</div>
               </div>
               <div className="col-sm-1 text-right">
-                <Link to="/signin"><button type="button" className="btn logo center-block logout_button" onClick={this.logout}><span className="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                <Link to={this.state.path + 'signin'} ><button type="button" className="btn logo center-block logout_button" onClick={this.logout}><span className="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                     </button></Link>
               </div>
             </div>
