@@ -11,10 +11,10 @@ const path = window.location.href.includes('github') ? '/w6d4-make-chirp/' : '/'
 window.renderView = function() { // need to call because when we get a response back, we need to recall render so it does another API call to actually show the photo on screen
     ReactDOM.render(
     <Router history ={browserHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/signin" component={Signin} />
-        <Route path="/main" component={Main} />
+        <Route path="" component={Home} />
+        <Route path="signup" component={Signup} />
+        <Route path="signin" component={Signin} />
+        <Route path="main" component={Main} />
     </Router> ,
     document.querySelector('#app')
     )
