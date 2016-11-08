@@ -26,7 +26,7 @@ class OtherUsers extends React.Component {
         fetch('https://still-springs-37963.herokuapp.com/followed', {
             body: JSON.stringify({
                 id: id,
-                api_token: sessionStorage.getItem('api_token')
+                api_token: sessionStorage.getItem('api_token') // have use body for push
                 // bringing in the API token to show whoever's logged in followers list.
             }),
             method: 'POST',
@@ -35,7 +35,9 @@ class OtherUsers extends React.Component {
     }
 
     render() {
+
         var users = this.state.users.map((user, i) => { // mapping through the users array created to display each user coded below.
+            // seperate into new component
             return <div key={i}>
                 <div className="row individual_users">
                     {user.firstname} {user.lastname}<br />
