@@ -13,9 +13,9 @@ class Home extends React.Component {
                     <h1>Chirp.</h1>
                 </div>
                 <div className="form-group">
-                    <Link to="/signup"><button type="button" id="signup" className="btn logout_button btn-block">Sign Up</button>
+                    <Link to={path + '/signup'}><button type="button" id="signup" className="btn logout_button btn-block">Sign Up</button>
                     </Link>
-                    <Link to="/signin"><button type="button" id="signin" className="btn logout_button btn-block">Sign In</button>
+                    <Link to={path + '/signin'}><button type="button" id="signin" className="btn logout_button btn-block">Sign In</button>
                     </Link>
                 </div>
             </div>

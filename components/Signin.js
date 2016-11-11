@@ -5,6 +5,7 @@ class Signin extends React.Component {
         super(props)
         this.signIn = this.signIn.bind(this)
         this.signedinHandler = this.signedinHandler.bind(this)
+        this.pressKeys = this.pressKeys.bind(this)
         this.state = {
             username: "",
             password: "",
@@ -34,6 +35,12 @@ class Signin extends React.Component {
         window.location.href = '/Main'
     }
 
+    pressKeys(event) {
+        if (event.key === 'Enter') {
+            this.signIn()
+        }
+    }
+
     render() {
         return <div>
             <div className="col-sm-4 col-sm-offset-4 panel signinup_panel">
@@ -49,7 +56,7 @@ class Signin extends React.Component {
                     <input type="password" id="password" name="password" className="form-control" required value={this.state.password} onChange={(e) => this.setState({password:e.target.value})} />
             </div>
             <div className="form-group">
-                <button id="signin" type="button" className="btn logout_button btn-block" onClick={this.signIn}>Sign In</button>
+                <button id="signin" type="button" className="btn logout_button btn-block" onClick={this.signIn} onKeyDown={this.pressKeys}>Sign In</button>
             </div>
         </div>
     </div>
